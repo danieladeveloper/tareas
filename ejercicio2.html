@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var inicio=["unacadena",3,9,1,10,500,1,10,true];
+        
+
+    function arraynumeros(arrayinicial){
+            
+        var nueva_serie= arrayinicial;
+        var nuevo_array= [];
+        
+        for(let i=0; i<nueva_serie.length;i++){
+           if (!isNaN(nueva_serie[i]) && typeof nueva_serie[i]=== "number"){
+                nuevo_array.push(nueva_serie[i]); 
+            }
+        
+        }
+        return nuevo_array;
+    }
+
+
+
+    var arraysolonumeros= arraynumeros (inicio);
+    console.log(arraysolonumeros);
+    
+    function ordenacion(arraysolonumeros){
+            var longitud= arraysolonumeros.length;
+            //var nuevaordenacion=[];
+
+            for(let i=0; i<longitud; i++){
+                for(let b=0; b<(longitud-i-1); b++){
+                    if(arraysolonumeros[b] > arraysolonumeros[b+1]){
+                        var temporal= arraysolonumeros[b];
+                        arraysolonumeros[b] = arraysolonumeros[b+1];
+                        arraysolonumeros[b+1]= temporal;
+                    }
+                }
+            }
+
+            return arraysolonumeros.reverse();
+    }
+               
+ var ordenados= ordenacion(arraysolonumeros); 
+console.log(ordenados);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

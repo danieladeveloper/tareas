@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+var numerosbase=[0,1];
+//var numeroDeElementos= 5; // este dato se pide desde el prompt
+
+function fibonacci(numero_elementos, numero_base){
+    
+    var nuevos_numeros= numero_base;
+console.log(numero_base.length);
+
+    for (let i=0; i< (numero_elementos-2); i++){
+        var longitud= nuevos_numeros.length;
+        var nuevo_elemento = nuevos_numeros[longitud-1]+ nuevos_numeros[longitud-2];
+        nuevos_numeros.push(nuevo_elemento);
+    }
+    
+    return nuevos_numeros;
+}
+
+let numeroDeElementos= prompt("ingrese un numero de elementos Fibonacci mayor a 2");
+if(!isNaN(numeroDeElementos) && (numeroDeElementos%2==0))
+{
+    var secuenciafibonacci = fibonacci(numeroDeElementos, numerosbase);
+console.log(secuenciafibonacci);
+
+}
+else {
+    console.log("ingrese un valor numerico entero mayor a 2");
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
